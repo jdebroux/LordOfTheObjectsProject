@@ -26,10 +26,9 @@ public class LordOfTheObjectsApp {
 		bowserJ.name = "Bowser Jr.";
 
 		SirBowser bigBow = new SirBowser();
-		bigBow.attack1 = 30;
+		bigBow.attack1 = 25;
 		bigBow.hp = 200;
 		bigBow.name = "Sir Bowser";
-
 
 		do {
 			introduction();
@@ -54,19 +53,18 @@ public class LordOfTheObjectsApp {
 			}
 
 			nextStoryBattle3();
-			
+
 			mario.hp += 100;
 			System.out.println("Mario's HP: " + mario.hp);
-			
+
 			beginBattle3();
 			mario.hp = sirBowserBattle(kb, mario.hp, bigBow.hp, mario, bigBow);
 
 			if (!(mario.hp > 0)) {
 				continue;
 			}
-			
-			
-			
+			endGameStory();
+
 		} while (playAgain(kb));
 
 	}// end main
@@ -79,7 +77,7 @@ public class LordOfTheObjectsApp {
 			switch (userInput) {
 			case 1:
 				foeHp = mario.attack1(foeHp);
-				System.out.println(mario.name + " shoots a bouncing ball at " + foe.name + ".  \nThe ball hits "
+				System.out.println(mario.name + " tosses a bouncing ball at " + foe.name + ".  \nThe ball hits "
 						+ foe.name + " in the" + " gut.  \nThis causes: " + mario.attack1 + " damage.");
 				break;
 			case 2:
@@ -90,9 +88,14 @@ public class LordOfTheObjectsApp {
 				break;
 			case 3:
 				foeHp = mario.attack3(foeHp);
+				System.out.println(mario.name + " flings a boomerang flower at " + foe.name + ".  \nThe flower hits "
+						+ foe.name + " in the neck.\nThis causes: " + mario.attack3 + " damage.");
 				break;
 			case 4:
 				foeHp = mario.attack4(foeHp);
+				System.out.println(mario.name + " hurls a big blue shell at " + foe.name + ".  \n" + foe.name
+						+ " tries " + "to dodge the blue shell, \nbut it locks on to " + foe.name + ", hits " + foe.name
+						+ " \nand explodes.\nThis causes: " + mario.attack4 + " damage.");
 				break;
 			}
 			foeAlive = foe.amIAlive(foeHp);
@@ -124,20 +127,25 @@ public class LordOfTheObjectsApp {
 			switch (userInput) {
 			case 1:
 				foeHp = mario.attack1(foeHp);
-				System.out.println(mario.name + " shoots a bouncing ball at " + foe.name + ".  \nThe ball hits "
+				System.out.println(mario.name + " tosses a bouncing ball at " + foe.name + ".  \nThe ball hits "
 						+ foe.name + " in the" + " gut.  \nThis causes: " + mario.attack1 + " damage.");
 				break;
 			case 2:
 				foeHp = mario.attack2(foeHp);
 				System.out.println(mario.name + " throws a red shell at " + foe.name + ".  \nThe shell hits " + foe.name
-						+ " in the" + " legs and knocks " + foe.name + " down.  \nThis causes: " + mario.attack2
+						+ " in the legs and knocks " + foe.name + " down.  \nThis causes: " + mario.attack2
 						+ " damage.");
 				break;
 			case 3:
 				foeHp = mario.attack3(foeHp);
+				System.out.println(mario.name + " flings a boomerang flower at " + foe.name + ".  \nThe flower hits "
+						+ foe.name + " in the neck.\nThis causes: " + mario.attack3 + " damage.");
 				break;
 			case 4:
 				foeHp = mario.attack4(foeHp);
+				System.out.println(mario.name + " hurls a big blue shell at " + foe.name + ".  \n" + foe.name
+						+ " tries " + "to dodge the blue shell, \nbut it locks on to " + foe.name + ", hits " + foe.name
+						+ " \nand explodes.\nThis causes: " + mario.attack4 + " damage.");
 				break;
 			}
 			foeAlive = foe.amIAlive(foeHp);
@@ -165,12 +173,12 @@ public class LordOfTheObjectsApp {
 		boolean playerAlive = true;
 		boolean foeAlive = true;
 		do {
-			
+
 			int userInput = choice(kb);
 			switch (userInput) {
 			case 1:
 				foeHp = mario.attack1(foeHp);
-				System.out.println(mario.name + " shoots a bouncing ball at " + foe.name + ".  \nThe ball hits "
+				System.out.println(mario.name + " tosses a bouncing ball at " + foe.name + ".  \nThe ball hits "
 						+ foe.name + " in the" + " gut.  \nThis causes: " + mario.attack1 + " damage.");
 				break;
 			case 2:
@@ -181,9 +189,14 @@ public class LordOfTheObjectsApp {
 				break;
 			case 3:
 				foeHp = mario.attack3(foeHp);
+				System.out.println(mario.name + " flings a boomerang flower at " + foe.name + ".  \nThe flower hits "
+						+ foe.name + " in the neck.\nThis causes: " + mario.attack3 + " damage.");
 				break;
 			case 4:
 				foeHp = mario.attack4(foeHp);
+				System.out.println(mario.name + " hurls a big blue shell at " + foe.name + ".  \n" + foe.name
+						+ " tries " + "to dodge the blue shell, \nbut it locks on to " + foe.name + ", hits " + foe.name
+						+ " \nand explodes.\nThis causes: " + mario.attack4 + " damage.");
 				break;
 			}
 			foeAlive = foe.amIAlive(foeHp);
@@ -232,7 +245,7 @@ public class LordOfTheObjectsApp {
 		return choice;
 
 	}// end choice
-	
+
 //	private static int choice(Scanner kb, int highParameter) { // returns a integer within 0 to high parameter
 //        int choice = 1;
 //        do {
@@ -304,13 +317,18 @@ public class LordOfTheObjectsApp {
 				+ "\n\n\tMARIO:I think I hear someone calling. YOUR MOM! <Mario Charges>"
 				+ "\n\n\tBowser Jr:Bring it on...");
 	}
-	
+
 	private static void beginBattle3() {
-        System.out.println("\nMario enters the top level and opens giant wooden doors."
-                + "\nBowser has the Princess chained upside down over evil rainbows. \n"
-                + "\n\tBowser:Look who it is?! You'll never defeat me! \n\tI'm going to take over the world, after I defeat you!" 
-                + "\n\n\tMARIO:Yahoohoo! <Mario leaps at Bowser>" 
-                + "\n\n\tBowser:Scoopa Koopas...");
-    }
+		System.out.println("\nMario enters the top level and opens giant wooden doors."
+				+ "\nBowser has the Princess chained upside down over evil rainbows. \n"
+				+ "\n\tBowser:Look who it is?! You'll never defeat me! \n\tI'm going to take over the world, after I defeat you!"
+				+ "\n\n\tMARIO:Yahoohoo! <Mario leaps at Bowser>" + "\n\n\tBowser:Scoopa Koopas...");
+	}
+
+	private static void endGameStory() { // test approved.
+		System.out.println("Upon defeating Bowser.  Mario rescues Princess Peach."
+				+ "\nThe whole Magic Kingdom throws a party... for Mario." + "\n\n\t\tThe End.");
+		System.out.println("\nMario has gained 50_000 Experience points!");
+	}
 
 }// end class
