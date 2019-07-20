@@ -6,19 +6,18 @@ public class SirBowser extends Participants {
 
 	}// end SirBowser no arg constructor
 
-	public int attack(int playerHp) {
+	public int attack1(int playerHp) {
 		int crit = (int)(Math.random()*10)+1;
 		if (crit > 7) {
 			playerHp -= attack1 * 2;
-			System.out.println("Bowser shoots a cannonball and hits Player1 right in the "
-					+ "forehead which does double damange!  \nPlayer1's health is now: "
-					+ playerHp);
-		}else
+			System.out.println("Bowser shoots a cannonball and hits Mario \nright in the "
+					+ "forehead which causes 60 damage!");
+		}else {
 			playerHp -= attack1;
-			System.out.println("Bowser tucks into his shell, and spins while chasing Player1 down."
-					+ "Player1 tries to run away, but is not quick enough.  Bowser collides into Player1,"
-					+ "and pops back to a defensive position."
-					+ "\nPlayer1's health is now: " + playerHp);
+			System.out.println("Bowser tucks into his shell, and spins while chasing Mario down."
+					+ "\nMario tries to run away, but is not quick enough.  \nBowser collides into Mario,"
+					+ "and pops back to a defensive position.  \nThis causes 30 damage!");
+		}
 		
 		return playerHp;
 	}//end attack()
