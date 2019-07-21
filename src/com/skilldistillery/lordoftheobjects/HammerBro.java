@@ -16,7 +16,7 @@ public class HammerBro extends Participants {
 			playerHp -= attack1;
 			System.out.println("Hammer Bro lobs his hammer and hits Mario in the chest.  This causes 15 damage.");
 		} else
-			System.out.println("Mario dives out of the way at the last second, \nand dodges Hammer Bro's hammer.  This causes 0 damage.");
+			System.out.println("Hammer Bro lobs his hammer, but Mario dives \nout of the way at the last second, \nand dodges Hammer Bro's hammer.  This causes 0 damage.");
 
 		return playerHp;
 	}

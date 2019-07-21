@@ -14,3 +14,5 @@ Week 2 homework for Skill Distillery Java bootcamp.
 * Terminal
 
 ### Lessons Learned
+
+### Attack Plan

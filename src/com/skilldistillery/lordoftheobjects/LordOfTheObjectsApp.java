@@ -43,6 +43,11 @@ public class LordOfTheObjectsApp {
 
 			mario.hp += 50;
 			System.out.println("Mario's HP: " + mario.hp);
+			mario.attack1 = 35;
+			mario.attack2 = 20;
+			mario.attack3 = 15;
+			mario.attack4 = 10;
+			
 
 			beginBattle2();
 
@@ -53,9 +58,15 @@ public class LordOfTheObjectsApp {
 			}
 
 			nextStoryBattle3();
+			
+			System.out.println(mario.name + " uses Magic Stars and powers up his attacks!");
 
 			mario.hp += 100;
 			System.out.println("Mario's HP: " + mario.hp);
+			mario.attack1 = 5;
+			mario.attack2 = 30;
+			mario.attack3 = 50;
+			mario.attack4 = 35;
 
 			beginBattle3();
 			mario.hp = sirBowserBattle(kb, mario.hp, bigBow.hp, mario, bigBow);
@@ -221,7 +232,7 @@ public class LordOfTheObjectsApp {
 	}// end hammerBroBattle
 
 	private static void introduction() {
-		System.out.println("\t\t    *** Welcome Mario 1971 ***");
+		System.out.println("\t\t    *** Welcome Mario 1981 ***");
 		System.out.print("Mario's story begins in a small town of Colorado's Mushroom Kingdom!\n"
 				+ "While in a timeshare resort on Yoshi's Island, a sales rep comes by \nand hits Mario on the head with a mushroom.");
 
@@ -246,30 +257,17 @@ public class LordOfTheObjectsApp {
 
 	}// end choice
 
-//	private static int choice(Scanner kb, int highParameter) { // returns a integer within 0 to high parameter
-//        int choice = 1;
-//        do {
-//            System.out.println("Enter Choice: ");
-//            choice = kb.nextInt();
-//
-//            if (choice > highParameter || choice < 1) {
-//                System.out.println("please only 1 - " + highParameter + ":");
-//            }
-//        } while ((choice > highParameter) || (choice < 1));
-//
-//        return choice;
-//
-//    }
-
 	private static void startGame() {
 		System.out.println("Mario is running out of Mushroom Kingdom at Super Mario Star Speed");
 		System.out.println("until Mario is confronted by Hammer Bro !!! ");
-		System.out.println("\nMario Must Fight. The Princess Depends On It! ");
+		System.out.println("\nMario Must Fight. The Princess Depends On It!\n");
+		System.out.println("Battle 1 has begun!\n");
+		System.out.println("*** Keep in mind, attacks affect each opponent differently. ***\n");
 
 	}// end startGame
 
 	private static void listOfUserBattleChoices() { // Prints the name of the
-		System.out.println("\nMario's Attack options");
+		System.out.println("Mario's Attack options");
 		System.out.println("\t(1) Toss a bouncing ball ");
 		System.out.println("\t(2) Throw a red shell ");
 		System.out.println("\t(3) Throw Boomerang Flower ");
@@ -291,7 +289,7 @@ public class LordOfTheObjectsApp {
 	}// end playAgain
 
 	private static void nextStoryBattle2() {
-		System.out.println("Now that Mario has defeated Hammer Bro, \nMario begins running towards Bowser's Castle!"
+		System.out.println("\nNow that Mario has defeated Hammer Bro, \nMario begins running towards Bowser's Castle!"
 				+ "\nAs Mario approaches the castle, he is greeted by Luigi. \n");
 		System.out.println("\tLUIGI:  Mario! Bowser Jr. is waiting for you at the \n\tentrance of the Castle!"
 				+ "\n\n\tMARIO: OH NO!" + "\n\n\tLUIGI: You'll need this mushroom to fight Bowser Jr!");
@@ -301,34 +299,36 @@ public class LordOfTheObjectsApp {
 	}// end nextStoryBattle2
 
 	private static void nextStoryBattle3() {
-		System.out.println("\n\n\tBowser Jr: You may have deafeated me, Mario, but \n\tyou'll never defeat my father."
-				+ "\n\t ugh...ah; Bowser Jr falls unconscious. \n\nMario begins enters Bowser's Castle!"
+		System.out.println("\n\n\tBOWSER JR: You may have deafeated me, Mario, but \n\tyou'll never defeat my father."
+				+ "\n\t ugh...ah; Bowser Jr falls unconscious. \n\nMario enters Bowser's Castle!"
 				+ "\nAs Mario walks up a long staircase, he hears \"Muh Ah Ah\" \n");
 		System.out.println("\n\tTOAD:  Mario! Please go save the Princess!" + "\n\n\tMARIO: I WILL!"
 				+ "\n\n\tTOAD: Here take these magic stars & mushrooms" + "\n\n\tMARIO: Here we go!");
 
 		System.out.println("\n\nMario has gained 100 HP");
-		System.out.println("Mario gained a new ability: Magic Stars");
+		System.out.println("Mario gained a new ability: Magic Stars\n");
 	}
 
 	private static void beginBattle2() {
-		System.out.println("\nBowser Jr. is blocking the entrance.\n"
-				+ "\n\tBowser Jr:I know why you've come! You'll never get the Princess!"
-				+ "\n\n\tMARIO:I think I hear someone calling. YOUR MOM! <Mario Charges>"
-				+ "\n\n\tBowser Jr:Bring it on...");
+		System.out.println("\nBOWSER JR. is blocking the entrance.\n"
+				+ "\n\tBOWSER JR: I know why you've come! You'll never get the Princess!"
+				+ "\n\n\tMARIO: I think I hear someone calling. YOUR MOM! <Mario Charges>"
+				+ "\n\n\tBOWSER JR: Bring it on...\n");
+		System.out.println("Battle 2 begins!\n");
 	}
 
 	private static void beginBattle3() {
-		System.out.println("\nMario enters the top level and opens giant wooden doors."
+		System.out.println("\nMario enters the top level and opens the giant wooden doors."
 				+ "\nBowser has the Princess chained upside down over evil rainbows. \n"
-				+ "\n\tBowser:Look who it is?! You'll never defeat me! \n\tI'm going to take over the world, after I defeat you!"
-				+ "\n\n\tMARIO:Yahoohoo! <Mario leaps at Bowser>" + "\n\n\tBowser:Scoopa Koopas...");
+				+ "\n\tBOWSER: Look who it is?! You'll never defeat me! \n\tI'm going to take over the world, after I defeat you!"
+				+ "\n\n\tMARIO: Yahoohoo! <Mario leaps at Bowser>" + "\n\n\tBOWSER:Scoopa Koopas...\n");
+		System.out.println("Boss battle begins!\n");
 	}
 
 	private static void endGameStory() { // test approved.
-		System.out.println("Upon defeating Bowser.  Mario rescues Princess Peach."
-				+ "\nThe whole Magic Kingdom throws a party... for Mario." + "\n\n\t\tThe End.");
-		System.out.println("\nMario has gained 50_000 Experience points!");
+		System.out.println("Upon defeating Bowser, Mario rescues Princess Peach and kisses her passionately!"
+				+ "\nThe whole Magic Kingdom throws a magic mushroom party... for Mario." + "\n\n\t\tThe End.");
+		System.out.println("\nMario has gained 50,000 Experience points!");
 	}
 
 }// end class
