@@ -4,7 +4,7 @@ public class BowserJr extends Participants {
 
 	public BowserJr() {
 
-	}//end BowserJr no arg constructor
+	}// end BowserJr no arg constructor
 
 	public int attack1(int playerHp) {
 		int crit = (int) (Math.random() * 10) + 1;
@@ -18,7 +18,8 @@ public class BowserJr extends Participants {
 			System.out.println("Bowser Jr. throws a shell with perfect spin.  \nMario tries to dive out"
 					+ " of the way, \nbut ends up landing right in the way of the shell and gets hit.  \nThis causes 20 damage!");
 		} else
-			System.out.println("Bowser Jr. tries to throw a fireball, but trips \nand falls over a shell causing 0 damage.");
+			System.out.println(
+					"Bowser Jr. tries to throw a fireball, but trips \nand falls over a shell causing 0 damage.");
 
 		return playerHp;
 	}// end attack()

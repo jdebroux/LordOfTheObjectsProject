@@ -18,6 +18,7 @@ public class Player1 extends Participants {
 
 	public int attack1(int foeHp) {
 		foeHp -= attack1;
+
 		return foeHp;
 	}
 

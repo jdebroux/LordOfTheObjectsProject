@@ -8,10 +8,6 @@ public class LordOfTheObjectsApp {
 		Scanner kb = new Scanner(System.in);
 
 		Player1 mario = new Player1();
-		mario.attack1 = 15;
-		mario.attack2 = 20;
-		mario.attack3 = 25;
-		mario.attack4 = 30;
 		mario.hp = 100;
 		mario.name = "Mario";
 
@@ -31,8 +27,13 @@ public class LordOfTheObjectsApp {
 		bigBow.name = "Sir Bowser";
 
 		do {
+			mario.hp = 100;
 			introduction();
 			startGame();
+			mario.attack1 = 15;
+			mario.attack2 = 20;
+			mario.attack3 = 25;
+			mario.attack4 = 30;
 			mario.hp = hammerBroBattle(kb, mario.hp, hammer.hp, mario, hammer);
 
 			if (!(mario.hp > 0)) {
@@ -47,7 +48,6 @@ public class LordOfTheObjectsApp {
 			mario.attack2 = 20;
 			mario.attack3 = 15;
 			mario.attack4 = 10;
-			
 
 			beginBattle2();
 
@@ -58,15 +58,15 @@ public class LordOfTheObjectsApp {
 			}
 
 			nextStoryBattle3();
-			
-			System.out.println(mario.name + " uses Magic Stars and powers up his attacks!");
+
+			System.out.println(mario.name + " uses Magic Stars and powers an attack!");
 
 			mario.hp += 100;
 			System.out.println("Mario's HP: " + mario.hp);
 			mario.attack1 = 5;
-			mario.attack2 = 30;
+			mario.attack2 = 25;
 			mario.attack3 = 50;
-			mario.attack4 = 35;
+			mario.attack4 = 30;
 
 			beginBattle3();
 			mario.hp = sirBowserBattle(kb, mario.hp, bigBow.hp, mario, bigBow);
@@ -111,10 +111,11 @@ public class LordOfTheObjectsApp {
 			}
 			foeAlive = foe.amIAlive(foeHp);
 			if (foeHp <= 0) {
-				System.out.println("\nBowser falls to his knees and waves a white flag in submission.");
-				System.out.println("Mario jumps high into the sky blocking out the sun,");
-				System.out.println("and comes down landing directly on Bowser's head");
-				System.out.println("causing a bloody fatal blow.");
+				System.out.println("\nIn a last resort, Bowser fires a massive cannon at Mario.");
+				System.out.println("Mario runs and jumps directly at the cannon ball.  At the last");
+				System.out.println("second Mario pulls out a green shell and rockets it into the cannon");
+				System.out.println("ball which flys back at Bowser.  Caught off guard, Bowser gets hit ");
+				System.out.println("and gets sent flying out into outerspace.");
 				return playerHp;
 			} else
 				System.out.println("Sir Bowser's HP is now: " + foeHp + "\n");
@@ -161,10 +162,11 @@ public class LordOfTheObjectsApp {
 			}
 			foeAlive = foe.amIAlive(foeHp);
 			if (foeHp <= 0) {
-				System.out.println("\nBowser JR. falls to his knees and waves a white flag in submission.");
-				System.out.println("Mario jumps high into the sky blocking out the sun,");
-				System.out.println("and comes down landing directly on Bowser JR's head");
-				System.out.println("causing a bloody fatal blow.");
+				System.out.println("\nBowser JR. jumps and tucks into his shell to try to hide.");
+				System.out.println("Mario sprints at Bowser Jr. at blazing speed,");
+				System.out.println("and kicks Bowser JR. into the castle wall.  Bowser JR's ");
+				System.out.println("shell breaks and crumbles around him moving him from a ");
+				System.out.println("private state to a public one. ");
 				return playerHp;
 			} else
 				System.out.println("Bowser JR's HP is now: " + foeHp + "\n");
@@ -261,8 +263,8 @@ public class LordOfTheObjectsApp {
 		System.out.println("Mario is running out of Mushroom Kingdom at Super Mario Star Speed");
 		System.out.println("until Mario is confronted by Hammer Bro !!! ");
 		System.out.println("\nMario Must Fight. The Princess Depends On It!\n");
-		System.out.println("Battle 1 has begun!\n");
 		System.out.println("*** Keep in mind, attacks affect each opponent differently. ***\n");
+		System.out.println("Battle 1 has begun!\n");
 
 	}// end startGame
 
@@ -306,7 +308,7 @@ public class LordOfTheObjectsApp {
 				+ "\n\n\tTOAD: Here take these magic stars & mushrooms" + "\n\n\tMARIO: Here we go!");
 
 		System.out.println("\n\nMario has gained 100 HP");
-		System.out.println("Mario gained a new ability: Magic Stars\n");
+		System.out.println("Mario gained a new item: Magic Stars\n");
 	}
 
 	private static void beginBattle2() {
@@ -326,9 +328,9 @@ public class LordOfTheObjectsApp {
 	}
 
 	private static void endGameStory() { // test approved.
-		System.out.println("Upon defeating Bowser, Mario rescues Princess Peach and kisses her passionately!"
-				+ "\nThe whole Magic Kingdom throws a magic mushroom party... for Mario." + "\n\n\t\tThe End.");
-		System.out.println("\nMario has gained 50,000 Experience points!");
+		System.out.println("Upon defeating Bowser, Mario rescues Princess Peach!"
+				+ "\nThe whole Magic Kingdom throws a huge mushroom party... for Mario." + "\n\n\t\tThe End.");
+		System.out.println("\nMario has gained 500,000 Experience points, and one coin!");
 	}
 
 }// end class
